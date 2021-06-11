@@ -9,10 +9,11 @@ import de.doubleslash.assertlog.log4j2.AssertLoggedExtension;
 
 public class AppTest {
 
-    private final App app = new App();
-
     @RegisterExtension
     static final AssertLoggedExtension assertLogged = new AssertLoggedExtension();
+
+    // subject under test
+    private final App app = new App();
 
     @Test
     public void shouldHaveLogged() {
